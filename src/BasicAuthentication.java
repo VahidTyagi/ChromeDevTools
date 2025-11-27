@@ -10,7 +10,7 @@ public class BasicAuthentication {
 		// TODO Auto-generated method stub
 
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver");
+		System.setProperty("webdriver.chrome.driver", "C:/driver/chromedriver.exe");
 		
 		ChromeDriver driver = new ChromeDriver();
 		//predicate, consumer

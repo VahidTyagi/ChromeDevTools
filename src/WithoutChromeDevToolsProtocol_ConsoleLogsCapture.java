@@ -1,3 +1,4 @@
+//WithoutChromeDevToolsProtocol_ConsoleLogsCapture
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -6,7 +7,7 @@ import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 
-public class ConsoleLogsCapture {
+public class WithoutChromeDevToolsProtocol_ConsoleLogsCapture {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -62,3 +63,4 @@ public class ConsoleLogsCapture {
 	}
 
 }
+

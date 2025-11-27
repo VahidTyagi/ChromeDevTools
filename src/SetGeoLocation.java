@@ -12,7 +12,7 @@ public class SetGeoLocation {
 		// TODO Auto-generated method stub
 
 		
-	System.setProperty("webdriver.chrome.driver", "/Users/rahulshetty/Documents/chromedriver");
+	System.setProperty("webdriver.chrome.driver", "C:/driver/chromedriver.exe");
 		
 		ChromeDriver driver = new ChromeDriver();
 		//40 3

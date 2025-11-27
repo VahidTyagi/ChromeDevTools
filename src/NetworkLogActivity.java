@@ -3,9 +3,12 @@ import java.util.Optional;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v93.network.Network;
-import org.openqa.selenium.devtools.v93.network.model.Request;
-import org.openqa.selenium.devtools.v93.network.model.Response;
+import org.openqa.selenium.devtools.v114.network.Network;
+import org.openqa.selenium.devtools.v115.network.model.Response;
+import org.openqa.selenium.devtools.v116.network.model.Request;
+//import org.openqa.selenium.devtools.v93.network.Network;
+//import org.openqa.selenium.devtools.v93.network.model.Request;
+//import org.openqa.selenium.devtools.v93.network.model.Response;
 
 
 public class NetworkLogActivity {
@@ -13,20 +16,21 @@ public class NetworkLogActivity {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/rahulshetty/Documents/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "C:/driver/chromedriver.exe");
 		
 		ChromeDriver driver = new ChromeDriver();
 		//log file ->
 		
 		DevTools devTools = driver.getDevTools();
 		devTools.createSession();
+		//devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
 		devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
-	
 		
 		devTools.addListener(Network.requestWillBeSent(), request ->
 		
 				{
-					Request req = request.getRequest();
+					//Request req = request.getRequest();
+					org.openqa.selenium.devtools.v114.network.model.Request req = request.getRequest();
 					System.out.println(req.getUrl());
 					//req.getHeaders()
 					
@@ -36,7 +40,7 @@ public class NetworkLogActivity {
 		devTools.addListener(Network.responseReceived(), response ->
 		
 		{
-			Response res = response.getResponse();
+			org.openqa.selenium.devtools.v114.network.model.Response res = response.getResponse();
 			System.out.println(res.getUrl());
 			System.out.println(res.getStatus());
 			if(res.getStatus().toString().startsWith("4"))

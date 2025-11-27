@@ -26,12 +26,15 @@
     <version>4.18.1</version>
 </dependency>
 
-<!-- DevTools for Chrome version 142 -->
+<!-- DevTools for Chrome version 142 
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-devtools-v128</artifactId>
+    <artifactId>selenium-devtools-v115</artifactId>
     <version>4.18.1</version>
 </dependency>
+
+-->
+
 
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
